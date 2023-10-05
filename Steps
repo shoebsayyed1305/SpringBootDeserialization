@@ -1,0 +1,18 @@
+Deserialization in Spring Boot ( Json to JAVA )
+
+Steps :- 
+
+1 Create JAVA POJO
+
+2 Configure Starter-web dependency
+
+3 Create post mapping controller as follows 
+         
+            //Desereliazation Json to Java
+          	//Accessing name from Json
+          	@PostMapping("/deserialize")
+          	public ResponseEntity<String> deserializeObject(@RequestBody Employee[] emp){   		
+          		return ResponseEntity.ok(emp[0].getName());
+          	}
+
+4 Send POST request through Postman
